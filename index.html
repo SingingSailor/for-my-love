@@ -1,19 +1,38 @@
-<h1>My Love ❤️</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PookieChan ❤️</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</head>
 <body>
     <div class="container">
         <h1>Welcome, PookieChan ❤️</h1>
         <p>So I made this for you......I hope you like it</p>
+
         <nav>
             <ul>
                 <li><a href="love-letter.html">Love Letter 💌</a></li>
                 <li><a href="confession.html">My Confession 🖤</a></li>
-                <li><a href="gallery.html">Memories 📸</a></li>
+                <li><a href="memories.html">Memories 📸</a></li>
             </ul>
         </nav>
     </div>
 </body>
-<nav>
-    <a href="love-letter.html">Love Letter</a>
-    <a href="confession.html">Confession</a>
-    <a href="memories.html">Memories</a>
-</nav>
+</html>
