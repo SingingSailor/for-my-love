@@ -75,11 +75,11 @@ nav a {
 }
 /* Best Friend Page Styling */
 .bsf-page {
-    background-color: #87CEEB; /* Sky Blue Background */
+    background-color: #04232f; /* Sky Blue Background */
     color: #fff; /* White Text */
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 28px;
 }
 
 .friendship-container {
