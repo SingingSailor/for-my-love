@@ -1,9 +1,9 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 /* Confession Page Styles */
@@ -15,7 +15,6 @@ body {
     align-items: center;
     justify-content: flex-start; /* Align content to the left */
     padding-left: 10%;
-    color: white;
 }
 
 /* Confession Text */
