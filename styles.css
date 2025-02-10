@@ -1,19 +1,54 @@
-
+/* General Styles */
 body {
-    background-color: #000; 
-    color: #ff0000; 
-    font-family: 'cursive', sans-serif;
+    background-color: black; /* Deep black background */
+    color: white; /* White text for contrast */
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    overflow: hidden;
+    position: relative;
 }
 
+/* Starry Sky Background Animation */
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
 
-h1 {
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+/* Sparkling Headings */
+@keyframes sparkle {
+    0% { text-shadow: 0 0 5px white; }
+    50% { text-shadow: 0 0 15px white; }
+    100% { text-shadow: 0 0 5px white; }
+}
+
+h1, h2, h3 {
     font-size: 50px;
-    color: #ff14919b;
-    text-shadow: 0 0 10px #ff1493, 0 0 20px #ff69b4, 0 0 30px #ff1493;
+    color: white;
+    animation: sparkle 2s infinite alternate ease-in-out;
 }
 
-
+/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
@@ -25,24 +60,9 @@ nav ul li {
 }
 
 nav a {
-    color: #ff00ff;
+    color: white;
     text-decoration: none;
     font-size: 20px;
-}
-
-
-@keyframes float-hearts {
-    0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
-    100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
-}
-
-.heart {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #060204; 
-    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
-    animation: float-hearts 10s linear infinite;
 }
 
 /* Confession Page: Static White Outlined Hearts */
@@ -54,9 +74,8 @@ nav a {
     position: absolute;
     width: 40px;
     height: 40px;
-    border: 3px solid white; /* White outline */
+    border: 3px solid white;
     border-radius: 50%;
-    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
     opacity: 0.7;
 }
 
@@ -69,32 +88,7 @@ nav a {
 
 /* Confession Page: White Text */
 .confession-text {
-    color: white;  /* White text */
+    color: white;
     text-align: center;
     font-size: 18px;
 }
-/* Best Friend Page Styling */
-.bsf-page {
-    background-color: #04232f; /* Sky Blue Background */
-    color: #fff; /* White Text */
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    padding: 28px;
-}
-
-.friendship-container {
-    margin-top: 10%;
-}
-
-.shayari {
-    font-size: 22px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #fff;
-    animation: fadeIn 3s ease-in-out infinite alternate;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0.6; }
-    100% { opacity: 1; }
-}
-
