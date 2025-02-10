@@ -1,44 +1,29 @@
 /* General Styles */
 body {
-    background-color: #000; /* Black background */
-    color: white; /* White text */
     font-family: 'Poppins', sans-serif;
     text-align: center;
-}
-
-/* Headings with subtle glow effect */
-h1, h2, h3 {
-    font-size: 50px;
-    color: white;
-    text-shadow: 0 0 5px #fff, 0 0 10px #ccc;
-}
-
-/* Navigation Menu */
-nav ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Confession Page Styling */
+/* Confession Page Styles */
 .confession-container {
-    position: relative;
-    padding: 20px;
+    background: url('sadcas.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding-left: 10%;
+    color: white;
 }
 
-/* White Text for Confession */
+/* Confession Text */
 .confession-text {
-    color: white;
-    text-align: center;
-    font-size: 18px;
+    text-align: left;
+    font-size: 22px;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6); /* Subtle black background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
