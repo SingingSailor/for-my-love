@@ -3,9 +3,38 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Index Page Styles */
+/* Audio Overlay */
+#audioStarter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#audioStarter h2 {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+#audioStarter p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Index Page */
 .container {
     background: url('heart.jpeg') no-repeat center center fixed;
     background-size: cover;
@@ -15,10 +44,8 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    color: white;
 }
 
-/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
@@ -33,94 +60,116 @@ nav ul li a {
     text-decoration: none;
     font-size: 24px;
     color: white;
-    background: rgba(255, 255, 255, 0.2); /* Subtle transparent white */
+    background: rgba(255,255,255,0.2);
     padding: 15px 20px;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255,255,255,0.4);
     transform: scale(1.1);
 }
 
-/* Confession Page Styles */
-.confession-container {
-    background: url('sadcas.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align content to the left */
-    padding-left: 10%;
-}
-
-/* Confession Text */
-.confession-text {
-    text-align: left;
-    font-size: 22px;
-    max-width: 500px;
-    background: rgba(5, 1, 6, 0); /* Subtle black background for readability */
-    padding: 20px;
-    border-radius: 10px;
-    color:beige;
-}
-/* Love Letter Page Styles */
+/* Love Letter Page */
 .love-letter {
     background: url('heart.jpeg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     padding: 40px;
     position: relative;
-    overflow: hidden;
+}
+
+.letter-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
 }
 
 .love-letter h1 {
     font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-bottom: 30px;
 }
 
 .love-letter p {
     font-size: 1.2em;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
+    margin: 20px 0;
 }
 
-/* Floating Hearts Animation */
+/* Confession Page */
+.confession-page {
+    background: url('sadcas.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.confession-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    position: relative;
+}
+
+.confession-text {
+    background: rgba(0,0,0,0.7);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+    position: relative;
+    z-index: 1;
+}
+
+.confession-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.confession-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Floating Hearts */
 .heart {
     position: absolute;
-    font-size: 24px;
+    font-size: 28px;
     opacity: 0.8;
     animation: float 6s linear infinite;
     pointer-events: none;
+    z-index: 0;
+}
+
+.confession-page .heart {
+    color: #ffffff !important;
+    font-size: 32px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 
-/* Love Letter Navigation */
-.love-letter nav {
+/* Navigation */
+nav {
     margin-top: 40px;
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.love-letter nav a {
+nav a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -129,6 +178,6 @@ nav ul li a:hover {
     transition: all 0.3s ease;
 }
 
-.love-letter nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+nav a:hover {
+    background: rgba(255,255,255,0.2);
 }
