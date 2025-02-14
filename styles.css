@@ -60,7 +60,7 @@ nav ul li a:hover {
     text-align: left;
     font-size: 22px;
     max-width: 500px;
-    background: rgba(175, 35, 226, 0.6); /* Subtle black background for readability */
+    background: rgba(5, 1, 6, 0); /* Subtle black background for readability */
     padding: 20px;
     border-radius: 10px;
 }
